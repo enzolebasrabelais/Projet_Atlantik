@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tbxNomSecteur = new System.Windows.Forms.TextBox();
-            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnAjouterSecteur = new System.Windows.Forms.Button();
             this.lblNomSecteur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -40,15 +40,15 @@
             this.tbxNomSecteur.Size = new System.Drawing.Size(100, 20);
             this.tbxNomSecteur.TabIndex = 0;
             // 
-            // btnAjouter
+            // btnAjouterSecteur
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(411, 199);
-            this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(75, 23);
-            this.btnAjouter.TabIndex = 1;
-            this.btnAjouter.Text = "Ajouter";
-            this.btnAjouter.UseVisualStyleBackColor = true;
-            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
+            this.btnAjouterSecteur.Location = new System.Drawing.Point(411, 199);
+            this.btnAjouterSecteur.Name = "btnAjouterSecteur";
+            this.btnAjouterSecteur.Size = new System.Drawing.Size(75, 23);
+            this.btnAjouterSecteur.TabIndex = 1;
+            this.btnAjouterSecteur.Text = "Ajouter";
+            this.btnAjouterSecteur.UseVisualStyleBackColor = true;
+            this.btnAjouterSecteur.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // lblNomSecteur
             // 
@@ -65,7 +65,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblNomSecteur);
-            this.Controls.Add(this.btnAjouter);
+            this.Controls.Add(this.btnAjouterSecteur);
             this.Controls.Add(this.tbxNomSecteur);
             this.Name = "formAjouterSecteur";
             this.Text = "formAjouterSecteur";
@@ -77,7 +77,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbxNomSecteur;
-        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button btnAjouterSecteur;
         private System.Windows.Forms.Label lblNomSecteur;
     }
 }

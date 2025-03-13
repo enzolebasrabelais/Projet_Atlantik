@@ -29,7 +29,7 @@ namespace Projet_Atlantik
                 maCnx.Open(); // on se connecte
 
                 // DEBUT requête paramétrée
-                requete = "Insert into PORT(NOMPORT) values (@PORT)";
+                requete = "Insert into PORT(NOM) values (@PORT)";
                 var maCde = new MySqlCommand(requete, maCnx);
                 maCde.Parameters.AddWithValue("@PORT", tbxAjouterPort.Text);
                 // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus

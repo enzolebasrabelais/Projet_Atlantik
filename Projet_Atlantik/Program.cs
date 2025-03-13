@@ -17,7 +17,7 @@ namespace Projet_Atlantik
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAjouterPort());
+            Application.Run(new FormAjouterLiaison());
         }
     }
 }
