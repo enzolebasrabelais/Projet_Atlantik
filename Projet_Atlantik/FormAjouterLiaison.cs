@@ -98,7 +98,38 @@ namespace Projet_Atlantik
 
         private void btnAjouterLiaison_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Id du client sélectionné:" + ((Secteur)(lbxNomSecteur.SelectedItem)).GetNoSecteur().ToString());
+            // MessageBox.Show("Id du client sélectionné:" + ((Secteur)(lbxNomSecteur.SelectedItem)).GetNoSecteur().ToString());
+            try
+            {
+                string requete;
+                maCnx.Open(); // on se connecte
+
+                // DEBUT requête paramétrée
+                requete = "Insert into LIAISON(noport_depart, nosecteur, noport_arrivee, distance) values (@NOPORT_DEPART, @NOSECTEUR, @NOPORT_ARRIVEE, @DISTANCE)";
+                var maCde = new MySqlCommand(requete, maCnx);
+                maCde.Parameters.AddWithValue("@NOPORT_DEPART", ((Port)(cmbDepart.SelectedItem)).GetNoPort());
+                maCde.Parameters.AddWithValue("@NOSECTEUR", ((Secteur)(lbxNomSecteur.SelectedItem)).GetNoSecteur());
+                maCde.Parameters.AddWithValue("@NOPORT_ARRIVEE", ((Port)(cmbArrivee.SelectedItem)).GetNoPort());
+                maCde.Parameters.AddWithValue("@DISTANCE", (string)tbxDistance.Text);
+                // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
+                // FIN requête paramétrée
+
+                int nbLigneAffectees;
+                nbLigneAffectees = maCde.ExecuteNonQuery();
+                MessageBox.Show("Nombre de ligne affectée(s) :" + nbLigneAffectees.ToString());
+
+            }
+            catch (MySqlException erreur)
+            {
+                MessageBox.Show("Erreur " + erreur.ToString());
+            }
+            finally
+            {
+                if (maCnx is object & maCnx.State == ConnectionState.Open)
+                {
+                    maCnx.Close(); // on se déconnecte
+                }
+            }
         }
     }
 }
