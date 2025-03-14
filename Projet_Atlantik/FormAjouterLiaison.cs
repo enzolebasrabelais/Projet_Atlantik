@@ -110,7 +110,7 @@ namespace Projet_Atlantik
                 maCde.Parameters.AddWithValue("@NOPORT_DEPART", ((Port)(cmbDepart.SelectedItem)).GetNoPort());
                 maCde.Parameters.AddWithValue("@NOSECTEUR", ((Secteur)(lbxNomSecteur.SelectedItem)).GetNoSecteur());
                 maCde.Parameters.AddWithValue("@NOPORT_ARRIVEE", ((Port)(cmbArrivee.SelectedItem)).GetNoPort());
-                maCde.Parameters.AddWithValue("@DISTANCE", (string)tbxDistance.Text);
+                maCde.Parameters.AddWithValue("@DISTANCE", tbxDistance.Text);
                 // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
                 // FIN requête paramétrée
 

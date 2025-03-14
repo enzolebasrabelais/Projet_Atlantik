@@ -43,3 +43,4 @@ C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\bin\Debug\System.Thr
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterPort.resources
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_A.040DB099.Up2Date
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterLiaison.resources
+C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterTarifsLiaison.resources

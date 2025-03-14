@@ -34,6 +34,9 @@
             this.lblDistance = new System.Windows.Forms.Label();
             this.btnAjouterLiaison = new System.Windows.Forms.Button();
             this.lbxNomSecteur = new System.Windows.Forms.ListBox();
+            this.lblDepartLiaison = new System.Windows.Forms.Label();
+            this.lblArriveeLiaison = new System.Windows.Forms.Label();
+            this.lblSecteursLiaison = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbDepart
@@ -86,11 +89,41 @@
             this.lbxNomSecteur.Size = new System.Drawing.Size(120, 95);
             this.lbxNomSecteur.TabIndex = 6;
             // 
+            // lblDepartLiaison
+            // 
+            this.lblDepartLiaison.AutoSize = true;
+            this.lblDepartLiaison.Location = new System.Drawing.Point(242, 149);
+            this.lblDepartLiaison.Name = "lblDepartLiaison";
+            this.lblDepartLiaison.Size = new System.Drawing.Size(45, 13);
+            this.lblDepartLiaison.TabIndex = 7;
+            this.lblDepartLiaison.Text = "Départ :";
+            // 
+            // lblArriveeLiaison
+            // 
+            this.lblArriveeLiaison.AutoSize = true;
+            this.lblArriveeLiaison.Location = new System.Drawing.Point(437, 149);
+            this.lblArriveeLiaison.Name = "lblArriveeLiaison";
+            this.lblArriveeLiaison.Size = new System.Drawing.Size(46, 13);
+            this.lblArriveeLiaison.TabIndex = 8;
+            this.lblArriveeLiaison.Text = "Arrivée :";
+            // 
+            // lblSecteursLiaison
+            // 
+            this.lblSecteursLiaison.AutoSize = true;
+            this.lblSecteursLiaison.Location = new System.Drawing.Point(43, 86);
+            this.lblSecteursLiaison.Name = "lblSecteursLiaison";
+            this.lblSecteursLiaison.Size = new System.Drawing.Size(55, 13);
+            this.lblSecteursLiaison.TabIndex = 9;
+            this.lblSecteursLiaison.Text = "Secteurs :";
+            // 
             // FormAjouterLiaison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSecteursLiaison);
+            this.Controls.Add(this.lblArriveeLiaison);
+            this.Controls.Add(this.lblDepartLiaison);
             this.Controls.Add(this.lbxNomSecteur);
             this.Controls.Add(this.btnAjouterLiaison);
             this.Controls.Add(this.lblDistance);
@@ -112,5 +145,8 @@
         private System.Windows.Forms.Label lblDistance;
         private System.Windows.Forms.Button btnAjouterLiaison;
         private System.Windows.Forms.ListBox lbxNomSecteur;
+        private System.Windows.Forms.Label lblDepartLiaison;
+        private System.Windows.Forms.Label lblArriveeLiaison;
+        private System.Windows.Forms.Label lblSecteursLiaison;
     }
 }
