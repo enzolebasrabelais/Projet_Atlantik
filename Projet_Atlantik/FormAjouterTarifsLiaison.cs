@@ -54,6 +54,34 @@ namespace Projet_Atlantik
 
                 }
                 jeuEnr.Close();
+
+                requete = "Select * from SECTEUR";
+                 maCde = new MySqlCommand(requete, maCnx);
+
+                // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
+                // FIN requête paramétrée
+
+                jeuEnr = maCde.ExecuteReader();
+                while (jeuEnr.Read())
+                {
+                    //cmbNomSecteur.Items.Add(new Secteur((int)jeuEnr["nosecteur"], (string)jeuEnr["nom"]));
+                    lbxSecteursAjouterTarifs.Items.Add(new Secteur(jeuEnr.GetInt32("nosecteur"), jeuEnr.GetString("nom")));
+                }
+                jeuEnr.Close();
+
+                requete = "Select * from LIAISON inner join SECTEUR on LIAISON.NOSECTEUR = SECTEUR.NOSECTEUR where LIAISON.NOSECTEUR = ((Secteur)(lbxSecteursAjouterTarifs.SelectedItem)).GetNoSecteur()";
+                 maCde = new MySqlCommand(requete, maCnx);
+
+                // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
+                // FIN requête paramétrée
+
+                jeuEnr = maCde.ExecuteReader();
+                while (jeuEnr.Read())
+                {
+                    //cmbNomSecteur.Items.Add(new Secteur((int)jeuEnr["nosecteur"], (string)jeuEnr["nom"]));
+                    cmbLiaisonAjouterTarifs.Items.Add(new Secteur(jeuEnr.GetInt32("nosecteur"), jeuEnr.GetString("nom")));
+                }
+                jeuEnr.Close();
             }
             catch (MySqlException erreur)
             {

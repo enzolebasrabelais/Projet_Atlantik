@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|c:\\users\\lebas\\source\\repos\\projet_atlantik\\projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|solutionrelative:projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|solutionrelative:projet_atlantik\\formajouterliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|c:\\users\\lebas\\source\\repos\\projet_atlantik\\projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|solutionrelative:projet_atlantik\\formajoutertarifsliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|c:\\users\\lebas\\source\\repos\\projet_atlantik\\projet_atlantik\\formajouterliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\projet_atlantik\\formajouterliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AB06FC3C-DBD6-46F7-94BB-62461C09C2C3}|Projet_Atlantik\\Projet_Atlantik.csproj|solutionrelative:projet_atlantik\\formajouterliaison.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Projet_Atlantik\\FormAjouterLiaison.cs",
               "ToolTip": "C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\Projet_Atlantik\\FormAjouterLiaison.cs",
               "RelativeToolTip": "Projet_Atlantik\\FormAjouterLiaison.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowBEAAAAmAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAwwD8AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T13:59:52.197Z",
               "EditorCaption": ""
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "Projet_Atlantik\\FormAjouterTarifsLiaison.cs",
               "ToolTip": "C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\Projet_Atlantik\\FormAjouterTarifsLiaison.cs*",
               "RelativeToolTip": "Projet_Atlantik\\FormAjouterTarifsLiaison.cs*",
-              "ViewState": "AQIAACcAAAAAAAAAAAAuwDMAAAAuAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAuwFEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T13:46:41.924Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "ToolTip": "C:\\Users\\lebas\\source\\repos\\Projet_Atlantik\\Projet_Atlantik\\FormAjouterLiaison.cs [Design]",
               "RelativeToolTip": "Projet_Atlantik\\FormAjouterLiaison.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T12:52:42.424Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-14T12:52:42.424Z"
             }
           ]
         }

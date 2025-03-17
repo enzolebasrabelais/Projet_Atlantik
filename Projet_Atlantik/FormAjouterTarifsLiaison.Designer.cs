@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.gbxTarifsCategorieType = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxSecteursAjouterTarifs = new System.Windows.Forms.ListBox();
+            this.cmbLiaisonAjouterTarifs = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // gbxTarifsCategorieType
@@ -41,20 +42,29 @@
             this.gbxTarifsCategorieType.TabStop = false;
             this.gbxTarifsCategorieType.Text = "Tarifs par Catégorie-Type";
             // 
-            // listBox1
+            // lbxSecteursAjouterTarifs
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(70, 53);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 1;
+            this.lbxSecteursAjouterTarifs.FormattingEnabled = true;
+            this.lbxSecteursAjouterTarifs.Location = new System.Drawing.Point(70, 53);
+            this.lbxSecteursAjouterTarifs.Name = "lbxSecteursAjouterTarifs";
+            this.lbxSecteursAjouterTarifs.Size = new System.Drawing.Size(120, 95);
+            this.lbxSecteursAjouterTarifs.TabIndex = 1;
+            // 
+            // cmbLiaisonAjouterTarifs
+            // 
+            this.cmbLiaisonAjouterTarifs.FormattingEnabled = true;
+            this.cmbLiaisonAjouterTarifs.Location = new System.Drawing.Point(70, 234);
+            this.cmbLiaisonAjouterTarifs.Name = "cmbLiaisonAjouterTarifs";
+            this.cmbLiaisonAjouterTarifs.Size = new System.Drawing.Size(121, 21);
+            this.cmbLiaisonAjouterTarifs.TabIndex = 2;
             // 
             // FormAjouterTarifsLiaison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.cmbLiaisonAjouterTarifs);
+            this.Controls.Add(this.lbxSecteursAjouterTarifs);
             this.Controls.Add(this.gbxTarifsCategorieType);
             this.Name = "FormAjouterTarifsLiaison";
             this.Text = "Ajouter les tarifs pour une liaison et une période";
@@ -66,6 +76,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbxTarifsCategorieType;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxSecteursAjouterTarifs;
+        private System.Windows.Forms.ComboBox cmbLiaisonAjouterTarifs;
     }
 }
