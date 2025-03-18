@@ -49,6 +49,7 @@
             this.lbxSecteursAjouterTarifs.Name = "lbxSecteursAjouterTarifs";
             this.lbxSecteursAjouterTarifs.Size = new System.Drawing.Size(120, 95);
             this.lbxSecteursAjouterTarifs.TabIndex = 1;
+            this.lbxSecteursAjouterTarifs.SelectedIndexChanged += new System.EventHandler(this.lbxSecteursAjouterTarifs_SelectedIndexChanged);
             // 
             // cmbLiaisonAjouterTarifs
             // 

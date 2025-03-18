@@ -68,9 +68,13 @@ namespace Projet_Atlantik
                     lbxSecteursAjouterTarifs.Items.Add(new Secteur(jeuEnr.GetInt32("nosecteur"), jeuEnr.GetString("nom")));
                 }
                 jeuEnr.Close();
+                lbxSecteursAjouterTarifs.SelectedIndex = 0;
 
-                requete = "Select * from LIAISON inner join SECTEUR on LIAISON.NOSECTEUR = SECTEUR.NOSECTEUR where LIAISON.NOSECTEUR = ((Secteur)(lbxSecteursAjouterTarifs.SelectedItem)).GetNoSecteur()";
+                requete = "SELECT liaison.NOPORT_DEPART portdepart, liaison.NOPORT_ARRIVEE portarrivee, d.NOM depart, a.NOM arrivee FROM liaison INNER JOIN secteur ON liaison.NOSECTEUR = secteur.NOSECTEUR INNER JOIN port d ON liaison.NOPORT_DEPART = d.NOPORT INNER JOIN port a ON liaison.NOPORT_ARRIVEE = a.NOPORT WHERE secteur.NOSECTEUR = @NOSECTEUR";
                  maCde = new MySqlCommand(requete, maCnx);
+                int numéro = ((Secteur)(lbxSecteursAjouterTarifs.SelectedItem)).GetNoSecteur();
+                MessageBox.Show(numéro.ToString());
+                maCde.Parameters.AddWithValue("@NOSECTEUR", numéro);
 
                 // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
                 // FIN requête paramétrée
@@ -79,7 +83,7 @@ namespace Projet_Atlantik
                 while (jeuEnr.Read())
                 {
                     //cmbNomSecteur.Items.Add(new Secteur((int)jeuEnr["nosecteur"], (string)jeuEnr["nom"]));
-                    cmbLiaisonAjouterTarifs.Items.Add(new Secteur(jeuEnr.GetInt32("nosecteur"), jeuEnr.GetString("nom")));
+                    cmbLiaisonAjouterTarifs.Items.Add(new Port(jeuEnr.GetInt32("portdepart"), jeuEnr.GetString("depart")));
                 }
                 jeuEnr.Close();
             }
@@ -94,6 +98,11 @@ namespace Projet_Atlantik
                     maCnx.Close(); // on se déconnecte
                 }
             }
+        }
+
+        private void lbxSecteursAjouterTarifs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
