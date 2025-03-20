@@ -31,6 +31,8 @@
             this.gbxTarifsCategorieType = new System.Windows.Forms.GroupBox();
             this.lbxSecteursAjouterTarifs = new System.Windows.Forms.ListBox();
             this.cmbLiaisonAjouterTarifs = new System.Windows.Forms.ComboBox();
+            this.btnAjouterTarifs = new System.Windows.Forms.Button();
+            this.cmbPeriode = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // gbxTarifsCategorieType
@@ -59,11 +61,31 @@
             this.cmbLiaisonAjouterTarifs.Size = new System.Drawing.Size(121, 21);
             this.cmbLiaisonAjouterTarifs.TabIndex = 2;
             // 
+            // btnAjouterTarifs
+            // 
+            this.btnAjouterTarifs.Location = new System.Drawing.Point(466, 339);
+            this.btnAjouterTarifs.Name = "btnAjouterTarifs";
+            this.btnAjouterTarifs.Size = new System.Drawing.Size(75, 23);
+            this.btnAjouterTarifs.TabIndex = 3;
+            this.btnAjouterTarifs.Text = "Ajouter";
+            this.btnAjouterTarifs.UseVisualStyleBackColor = true;
+            this.btnAjouterTarifs.Click += new System.EventHandler(this.btnAjouterTarifs_Click);
+            // 
+            // cmbPeriode
+            // 
+            this.cmbPeriode.FormattingEnabled = true;
+            this.cmbPeriode.Location = new System.Drawing.Point(210, 339);
+            this.cmbPeriode.Name = "cmbPeriode";
+            this.cmbPeriode.Size = new System.Drawing.Size(121, 21);
+            this.cmbPeriode.TabIndex = 4;
+            // 
             // FormAjouterTarifsLiaison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbPeriode);
+            this.Controls.Add(this.btnAjouterTarifs);
             this.Controls.Add(this.cmbLiaisonAjouterTarifs);
             this.Controls.Add(this.lbxSecteursAjouterTarifs);
             this.Controls.Add(this.gbxTarifsCategorieType);
@@ -79,5 +101,7 @@
         private System.Windows.Forms.GroupBox gbxTarifsCategorieType;
         private System.Windows.Forms.ListBox lbxSecteursAjouterTarifs;
         private System.Windows.Forms.ComboBox cmbLiaisonAjouterTarifs;
+        private System.Windows.Forms.Button btnAjouterTarifs;
+        private System.Windows.Forms.ComboBox cmbPeriode;
     }
 }

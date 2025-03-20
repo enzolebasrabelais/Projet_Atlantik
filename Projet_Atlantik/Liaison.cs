@@ -8,16 +8,19 @@ namespace Projet_Atlantik
 {
     class Liaison
     {
-        private int NoLiaison, NoPortDepart, NoPortArrivee;
+        private int NoLiaison;
         private string NomDepart, NomArrivee;
 
-        public Liaison(int NoLiaison, int NoPortDepart, int NoPortArrivee, string NomDepart, string NomArrivee)
+        public Liaison(int NoLiaison, string NomDepart, string NomArrivee)
         {
             this.NoLiaison = NoLiaison;
-            this.NoPortDepart = NoPortDepart;
-            this.NoPortArrivee = NoPortArrivee;
             this.NomDepart = NomDepart;
             this.NomArrivee = NomArrivee;
+        }
+
+        public int GetNoLiaison()
+        {
+            return NoLiaison;
         }
 
 
