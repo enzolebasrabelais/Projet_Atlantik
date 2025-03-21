@@ -25,7 +25,7 @@ namespace Projet_Atlantik
 
         public override string ToString()
         {
-            return DateDebut + " ou " + DateFin;
+            return DateDebut.ToString("dd'/'MM'/'yyyy") + " ou " + DateFin.ToString("dd'/'MM'/'yyyy");
         }
     }
 }

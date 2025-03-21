@@ -50,7 +50,7 @@ namespace Projet_Atlantik
 
                     tbx = new TextBox();
                     tbx.Location = new Point(107, 25 * i);
-                    tbx.Tag = jeuEnr["lettrecategorie"].ToString() + jeuEnr["notype"].ToString();
+                    tbx.Tag = jeuEnr["lettrecategorie"].ToString() + ";" + jeuEnr["notype"].ToString();
                     gbxTarifsCategorieType.Controls.Add(tbx);
                     
                     //cmbNomSecteur.Items.Add(new Secteur((int)jeuEnr["nosecteur"], (string)jeuEnr["nom"]));
@@ -113,7 +113,7 @@ namespace Projet_Atlantik
             {
                 string requete;
                 maCnx.Open();
-                lbxSecteursAjouterTarifs.SelectedIndex = 0;
+               // lbxSecteursAjouterTarifs.SelectedIndex = 0;
                 requete = "SELECT liaison.NOLIAISON noliaison, liaison.NOPORT_DEPART portdepart, liaison.NOPORT_ARRIVEE portarrivee, d.NOM depart, a.NOM arrivee FROM liaison INNER JOIN secteur ON liaison.NOSECTEUR = secteur.NOSECTEUR INNER JOIN port d ON liaison.NOPORT_DEPART = d.NOPORT INNER JOIN port a ON liaison.NOPORT_ARRIVEE = a.NOPORT WHERE secteur.NOSECTEUR = @NOSECTEUR";
                 var maCde = new MySqlCommand(requete, maCnx);
                 int numero = ((Secteur)(lbxSecteursAjouterTarifs.SelectedItem)).GetNoSecteur();
@@ -150,34 +150,70 @@ namespace Projet_Atlantik
 
         private void btnAjouterTarifs_Click(object sender, EventArgs e)
         {
-            //string lettre;
-            //double tarif;
-            //foreach (Control element in gbxTarifsCategorieType.Controls)
-            //{
-            //    if (element is TextBox)
-            //    {
-            //        lettre = element.Tag.ToString();
-            //        tarif = ((TextBox)element).Text.;
-            //    }
-            //    try
-            //    {
-            //        string requete;
-            //        maCnx.Open();
+            string numeroTag="";
+            string lettreTag="";
+            int numeroType=0;
+            double tarif=0;
+            foreach (Control element in gbxTarifsCategorieType.Controls)
+            {
+                if (element is TextBox)
+                {
+                    string[] texteTag = element.Tag.ToString().Split(';');
+                    lettreTag = texteTag[0];
+                    numeroTag = texteTag[1];
+                    numeroType = int.Parse(numeroTag);
+                    tarif = double.Parse(element.Text);
+                    //tarif = recupTarif.
+                    
+                }
+                try
+                {
+                    string requete;
+                    maCnx.Open();
 
-            //        requete = "Insert into TARIFER(noperiode, lettrecategorie, notype, noliaison, tarif) values (@NOPERIODE, @LETTRE, @NOTYPE, @NOLIAISON, @TARIF)";
-            //        var maCde = new MySqlCommand(requete, maCnx);
-            //        maCde.Parameters.AddWithValue("@NOPERIODE", ((Periode)(cmbPeriode.SelectedItem)).GetNoPeriode());
-            //        maCde.Parameters.AddWithValue("@LETTRE", );
-            //        maCde.Parameters.AddWithValue("@NOTYPE", ((
-            //        maCde.Parameters.AddWithValue("@NOLIAISON", ((Liaison)cmbLiaisonAjouterTarifs.SelectedItem)).);
-            //        // POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci-dessus
-            //        // FIN requête paramétrée
+                    requete = "Insert into TARIFER(noperiode, lettrecategorie, notype, noliaison, tarif) values (@NOPERIODE, @LETTRE, @NOTYPE, @NOLIAISON, @TARIF)";
+                    var maCde = new MySqlCommand(requete, maCnx);
+                    maCde.Parameters.AddWithValue("@NOPERIODE", ((Periode)(cmbPeriode.SelectedItem)).GetNoPeriode());
+                    maCde.Parameters.AddWithValue("@LETTRE", lettreTag);
+                    maCde.Parameters.AddWithValue("@NOTYPE", numeroType);
+                    maCde.Parameters.AddWithValue("@NOLIAISON", ((Liaison)cmbLiaisonAjouterTarifs.SelectedItem).GetNoLiaison());
+                    maCde.Parameters.AddWithValue("@TARIF", tarif);
+                    //POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci - dessus
+                    // FIN requête paramétrée
 
-            //        int nbLigneAffectees;
-            //        nbLigneAffectees = maCde.ExecuteNonQuery();
-            //        MessageBox.Show("Nombre de ligne affectée(s) :" + nbLigneAffectees.ToString());
-            //   }
-           // }
+                    int nbLigneAffectees;
+                    nbLigneAffectees = maCde.ExecuteNonQuery();
+                    MessageBox.Show("Nombre de ligne affectée(s) :" + nbLigneAffectees.ToString());
+                }
+                catch (MySqlException ex)
+
+                {
+                    Console.WriteLine("Erreur " + ex.ToString());
+                }
+                finally
+
+                {
+
+                    //if (jeuEnr is object & !jeuEnr.IsClosed)
+
+                    //{
+
+                    //    jeuEnr.Close(); // s'il existe et n'est pas déjà fermé
+
+                    //}
+
+
+
+                    if (maCnx is object & maCnx.State == ConnectionState.Open)
+
+                    {
+
+                        maCnx.Close(); // on se déconnecte
+
+                    }
+
+                }
+            }
         }
     }
 }
