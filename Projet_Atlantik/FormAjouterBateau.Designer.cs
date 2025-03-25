@@ -31,6 +31,7 @@
             this.tbxNomBateau = new System.Windows.Forms.TextBox();
             this.btnAjouterBateau = new System.Windows.Forms.Button();
             this.lblNomBateau = new System.Windows.Forms.Label();
+            this.gbxAjouterBateau = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // tbxNomBateau
@@ -48,6 +49,7 @@
             this.btnAjouterBateau.TabIndex = 1;
             this.btnAjouterBateau.Text = "Ajouter";
             this.btnAjouterBateau.UseVisualStyleBackColor = true;
+            this.btnAjouterBateau.Click += new System.EventHandler(this.btnAjouterBateau_Click);
             // 
             // lblNomBateau
             // 
@@ -58,16 +60,27 @@
             this.lblNomBateau.TabIndex = 2;
             this.lblNomBateau.Text = "Nom bateau :";
             // 
+            // gbxAjouterBateau
+            // 
+            this.gbxAjouterBateau.Location = new System.Drawing.Point(450, 91);
+            this.gbxAjouterBateau.Name = "gbxAjouterBateau";
+            this.gbxAjouterBateau.Size = new System.Drawing.Size(217, 278);
+            this.gbxAjouterBateau.TabIndex = 3;
+            this.gbxAjouterBateau.TabStop = false;
+            this.gbxAjouterBateau.Text = "Capacités Maximales";
+            // 
             // FormAjouterBateau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gbxAjouterBateau);
             this.Controls.Add(this.lblNomBateau);
             this.Controls.Add(this.btnAjouterBateau);
             this.Controls.Add(this.tbxNomBateau);
             this.Name = "FormAjouterBateau";
             this.Text = "Ajouter un bateau";
+            this.Load += new System.EventHandler(this.FormAjouterBateau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,5 +91,6 @@
         private System.Windows.Forms.TextBox tbxNomBateau;
         private System.Windows.Forms.Button btnAjouterBateau;
         private System.Windows.Forms.Label lblNomBateau;
+        private System.Windows.Forms.GroupBox gbxAjouterBateau;
     }
 }

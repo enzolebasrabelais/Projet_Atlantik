@@ -44,3 +44,4 @@ C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atl
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_A.040DB099.Up2Date
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterLiaison.resources
 C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterTarifsLiaison.resources
+C:\Users\lebas\source\repos\Projet_Atlantik\Projet_Atlantik\obj\Debug\Projet_Atlantik.FormAjouterBateau.resources
