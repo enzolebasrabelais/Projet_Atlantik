@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bateau.cs" />
     <Compile Include="FormAjouterBateau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,12 @@
     <Compile Include="FormAjouterTarifsLiaison.Designer.cs">
       <DependentUpon>FormAjouterTarifsLiaison.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModifierBateau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierBateau.Designer.cs">
+      <DependentUpon>FormModifierBateau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Liaison.cs" />
     <Compile Include="Periode.cs" />
     <Compile Include="Port.cs" />
@@ -152,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterTarifsLiaison.resx">
       <DependentUpon>FormAjouterTarifsLiaison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierBateau.resx">
+      <DependentUpon>FormModifierBateau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
