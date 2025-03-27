@@ -48,6 +48,7 @@ namespace Projet_Atlantik
 
                     tbx = new TextBox();
                     tbx.Location = new Point(107, 50 * i);
+                    tbx.Tag = jeuEnr["lettrecategorie"].ToString();
                     gbxAjouterBateau.Controls.Add(tbx);
 
                     //cmbNomSecteur.Items.Add(new Secteur((int)jeuEnr["nosecteur"], (string)jeuEnr["nom"]));
@@ -77,20 +78,23 @@ namespace Projet_Atlantik
 
         private void btnAjouterBateau_Click(object sender, EventArgs e)
         {
-
+            long noBateauGenere = 0;
             try
             {
                 string requete;
                 maCnx.Open();
 
-                requete = "Insert into BATEAU(nom) values (@NOMBATEAU) RETURNING nobateau";
+                //requete = "Insert into BATEAU(nom) values (@NOMBATEAU);SELECT LAST_INSERT_ID();";
+                requete = "Insert into BATEAU(nom) values (@NOMBATEAU)";
                 var maCde = new MySqlCommand(requete, maCnx);
                 maCde.Parameters.AddWithValue("@NOMBATEAU", tbxNomBateau.Text);
                 //POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci - dessus
                 // FIN requête paramétrée
 
-                int noBateauGenere;
-                noBateauGenere = (int)maCde.ExecuteScalar();
+
+                //noBateauGenere = Convert.ToInt32((maCde.ExecuteScalar()));
+                maCde.ExecuteNonQuery();
+                noBateauGenere = maCde.LastInsertedId;
             }
             catch (MySqlException ex)
 
@@ -111,21 +115,18 @@ namespace Projet_Atlantik
                 }
 
             }
-        
-        
+           
+
+
 
             foreach (Control element in gbxAjouterBateau.Controls)
             {
                 if (element is TextBox)
                 {
-                    string[] texteTag = element.Tag.ToString().Split(';');
-                    lettreTag = texteTag[0];
-                    numeroTag = texteTag[1];
-                    numeroType = int.Parse(numeroTag);
-                    tarif = double.Parse(element.Text);
+                    string texteTag = element.Tag.ToString();
                     //tarif = recupTarif.
 
-                }
+               
                 try
                 {
                     string requete;
@@ -133,10 +134,9 @@ namespace Projet_Atlantik
 
                     requete = "Insert into CONTENIR(lettrecategorie, nobateau, capacitemax) values (@LETTRE, @NOBATEAU, @CAPAMAX)";
                     var maCde = new MySqlCommand(requete, maCnx);
-                    maCde.Parameters.AddWithValue("@LETTRE", lettreTag);
-                    maCde.Parameters.AddWithValue("@NOTYPE", numeroType);
-                    maCde.Parameters.AddWithValue("@NOLIAISON", ((Liaison)cmbLiaisonAjouterTarifs.SelectedItem).GetNoLiaison());
-                    maCde.Parameters.AddWithValue("@TARIF", tarif);
+                    maCde.Parameters.AddWithValue("@LETTRE", texteTag);
+                    maCde.Parameters.AddWithValue("@NOBATEAU", noBateauGenere);
+                    maCde.Parameters.AddWithValue("@CAPAMAX", int.Parse(element.Text));
                     //POUR SOUCIS DE TYPAGE voir exemple ExecuteNonQuery, ci - dessus
                     // FIN requête paramétrée
 
@@ -163,6 +163,8 @@ namespace Projet_Atlantik
                     }
 
                 }
+                }
+
             }
         }
     }
