@@ -103,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bateau.cs" />
+    <Compile Include="FormAfficherTraversee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAfficherTraversee.Designer.cs">
+      <DependentUpon>FormAfficherTraversee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAjouterBateau.cs">
       <SubType>Form</SubType>
     </Compile>
