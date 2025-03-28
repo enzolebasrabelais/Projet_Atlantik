@@ -157,6 +157,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secteur.cs" />
+    <EmbeddedResource Include="FormAfficherTraversee.resx">
+      <DependentUpon>FormAfficherTraversee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAjouterBateau.resx">
       <DependentUpon>FormAjouterBateau.cs</DependentUpon>
     </EmbeddedResource>

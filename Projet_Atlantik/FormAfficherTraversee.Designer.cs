@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnAfficherTraversee = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnAfficherTraversee
+            // 
+            this.btnAfficherTraversee.Location = new System.Drawing.Point(285, 107);
+            this.btnAfficherTraversee.Name = "btnAfficherTraversee";
+            this.btnAfficherTraversee.Size = new System.Drawing.Size(125, 23);
+            this.btnAfficherTraversee.TabIndex = 0;
+            this.btnAfficherTraversee.Text = "Afficher les traversées";
+            this.btnAfficherTraversee.UseVisualStyleBackColor = true;
+            // 
+            // FormAfficherTraversee
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAfficherTraversee);
+            this.Name = "FormAfficherTraversee";
             this.Text = "FormAfficherTraversee";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAfficherTraversee;
     }
 }
